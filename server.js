@@ -11,7 +11,7 @@ const express = require('express');
 
 const app = express();
 
-const port = 5000;
+const port = process.env.port|| 5000 || process.env.port;
 
 app.use((req,res,next)=>{
     console.log("a request came ",Date.now());
